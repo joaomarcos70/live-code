@@ -1,6 +1,8 @@
 const express = require('express')
+const pessoas = require('./Pessoas-route')
 
 module.exports = app => {
     app.use(express.json())
-    app.get('/', (req, res) => res.send('Alo mundo'))
+    app.use(pessoas)
+
 }
